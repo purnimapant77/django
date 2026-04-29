@@ -7,15 +7,24 @@
 </head>
 <body>
     <h3 style="color: rgb(45, 218, 36);">Information about players</h3>
-    <table border="2px solid " >
+    <table border="1" >
         <tr style="color: rgb(241, 17, 218);">
-            <th>S.N</th><th>Name</th><th>Age</th>
+            <th>S.N</th><th>Name</th><th>Age</th><th>Score</th><th>Performance</th>
         </tr>
     {% for people in peoples %}
         <tr style="color: rgb(203, 40, 99);">
             <td>{{forloop.counter}}</td>
             <td>{{people.name}}</td>
             <td>{{people.age}}</td>
+            <td>{{people.score}}</td>
+            <td>{% if people.score < 100 %}
+                good 
+                {% elif people.score >= 100 and people.score < 200 %}  {# djago template tokanize by space so their must be space between#}
+                better 
+                {% else %}
+                best
+                {% endif %}
+            </td>
         </tr>
     {% endfor %}
     </table>
