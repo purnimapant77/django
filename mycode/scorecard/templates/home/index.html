@@ -6,6 +6,18 @@
     <title>ScoreCard</title>
 </head>
 <body>
-    {{peoples}}
+    <h3 style="color: rgb(45, 218, 36);">Information about players</h3>
+    <table border="2px solid " >
+        <tr style="color: rgb(241, 17, 218);">
+            <th>S.N</th><th>Name</th><th>Age</th>
+        </tr>
+    {% for people in peoples %}
+        <tr style="color: rgb(203, 40, 99);">
+            <td>{{forloop.counter}}</td>
+            <td>{{people.name}}</td>
+            <td>{{people.age}}</td>
+        </tr>
+    {% endfor %}
+    </table>
 </body>
 </html>

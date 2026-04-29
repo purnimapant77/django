@@ -8,4 +8,4 @@ def players(request):
         {'name':"Ananya Bhatta", 'age':10},
         {'name':"Anni Pathak", 'age':22}
     ]
-    return render(request, 'home/index.html', context={"peoples":peoples})
+    return render(request, 'home/index.html', context={"peoples":peoples}) #when we need to send data from bakhend to template we use context
