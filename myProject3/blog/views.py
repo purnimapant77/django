@@ -4,7 +4,10 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def post_detail(request,post_id):
-    return HttpResponse(f"<h3>your id is {post_id}")
+    return HttpResponse(f"<h3>your id is {post_id}</h3>")
 
 def user_detail(request, username):
-    return HttpResponse(f"<h3>your username is {username}")
+    return HttpResponse(f"<h3>your username is {username}</h3>")
+
+def article_by_years(request, year):
+    return HttpResponse(f"<h3>Articles from {year}</h3>")
